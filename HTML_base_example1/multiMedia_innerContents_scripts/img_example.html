@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/img_example.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- W descripter (주로 사용)  -->
+    <img srcset="images/Shinobu400.jpg 400w,
+        images/Shinobu700.jpg 700w,
+        images/Shinobu1000.jpg 1000w" 
+        sizes="(max-width: 500px) 444px,
+        (max-width: 800px) 777px,
+        1222px" src="images/Shinobu.jpg" alt="Shinobu">
+
+        <!-- X descripter -->
+    <img srcset="images/Shinobu400.jpg 1x,
+        images/Shinobu700.jpg 1.75x,
+        images/Shinobu1000.jpg 2.5x" 
+        src="images/Shinobu.jpg" alt="Shinobu">
+
+    <figure>
+        <img src="images/Shinobu.jpg" alt="Shinobu">
+        <figcaption>시노부 이미지 입니다.</figcaption>
+    </figure>
+</body>
+
+</html>

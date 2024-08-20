@@ -1,0 +1,62 @@
+@charset 'utf-8';
+
+/* <a> 태그 기본적인 예제 */
+/* a {
+    font-weight: bold;
+    width: 100px;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    background: orange;
+} */
+
+
+/* 목차 예제(like 나무위키) */
+/* h2 {
+    padding-bottom: 1000px;
+
+} */
+
+/* b(거의 사용 X), mark, em, strong */
+
+p {
+    line-height: 50px;
+}
+
+b {
+    font-weight: normal;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+}
+
+code {
+    color: orange;
+    background: lightgray;
+    padding: 3px;
+    border: 1px solid orange;
+}
+
+kbd {
+    padding: 0 3px;
+    border-radius: 3px;
+    border-top: 2px solid rgb(240,240,240);
+    border-bottom: 2px solid rgb(205,205,205);
+    border-left: 2px solid rgb(260,260,260);
+    border-right: 2px solid rgb(140,140,140);
+}
+
+.bak {
+    font-weight: bold;
+    font-size: 20px;
+}
+
