@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/table_content_example.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 머릿글이 위쪽 -->
+    <table>
+        <caption>데이터 타입 & 값</caption>
+
+        <colgroup>
+            <col style="background-color: tomato;" span="2">
+            <col>
+            <col>
+        </colgroup>
+
+        <tr>
+            <th colspan="3" rowspan="1" id="th-data">데이터</th>
+        </tr>
+        <tr>
+            <th abbr="blank" scope="col" headers="th-data"></th>
+            <th abbr="Type" scope="col" headers="th-data">타입</th>
+            <th abbr="Value" scope="col" headers="th-data">값</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>알파벳</td>
+            <td>a</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>숫자</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+
+    <!-- 머릿글이 왼쪽 -->
+    <table>
+        <caption>데이터 타입 & 값</caption>
+        <tr>
+            <th colspan="1" rowspan="2" id="th-data">데이터</th>
+            <th abbr="Type" scope="col" headers="th-data" id="th-type">타입</th>
+            <td headers="th-type">알파벳</td>
+            <td headers="th-type">숫자</td>
+
+        </tr>
+        <tr>
+            <th abbr="Value" scope="col" headers="th-data" id="th-value">값</th>
+            <td headers="th-value">a</td>
+            <td headers="th-value">7</td>
+        </tr>
+    </table>
+</body>
+
+    <!-- Heropy 의 예제 -->
+    <table>
+        <caption>Fruits</caption>
+        <colgroup>
+          <col span="2" style="background-color: yellowgreen;">
+          <col style="background-color: tomato;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>F123A</td>
+            <td>Apple</td>
+            <td>$22</td>
+          </tr>
+          <tr>
+            <td>F098B</td>
+            <td>Banana</td>
+            <td>$19</td>
+          </tr>
+        </tbody>
+      </table>
+</html>

@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+table {
+    /* 셀의 칸 사이 여백 없애기 */
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid red;
+    padding: 10px;
+}

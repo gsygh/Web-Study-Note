@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 라벨 가능 요소를 참조 -->
+    <input type="checkbox" id="user-agreement1" name="agree" />
+    <label for="user-agreement1">동의하십니까?</label>
+
+    <!-- 라벨 가능 요소를 포함(추천) -->
+    <label>
+        <input type="checkbox" />
+        동의하십니까?
+    </label>
+
+    <!-- 검색 예제 -->
+    <label>
+        검색 <input type="search">
+    </label>
+
+    <!-- 클릭 시 alert 예제 -->
+    <button onclick="doIt()">클릭하세요!</button>
+
+    <script>
+        function doIt() {
+            alert('클릭했습니다!');
+        }
+    </script>
+
+    <!-- textarea 예제 -->
+    <textarea name="" id="" rows="4" placeholder="내용을 입력하세요"></textarea>
+
+
+    <!-- fieldset, legend 예제 -->
+    <fieldset>
+        <legend>Coffee Size</legend>
+        <label>
+            <input type="radio" name="Size" value="tall">
+            Tall
+        </label>
+        <label>
+            <input type="radio" name="Size" value="grande">
+            Grande
+        </label>
+        <label>
+            <input type="radio" name="Size" value="venti">
+            Venti
+        </label>
+
+    </fieldset>
+
+    <!-- select, datalist, optgroup, option 예제 -->
+    <select name="fruits">
+
+        <optgroup label="내가 좋아하는 과일">
+            <option>Apple</option>
+            <option>Orange</option>
+            <option>Banana</option>
+        </optgroup>
+        <optgroup label="내가 싫어하는 과일">
+            <option selected>Mango</option>
+            <option>Fineapple</option>
+        </optgroup>
+
+    </select>
+
+    <input type="text" list="fruits">
+
+    <datalist id="fruits">
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Fineapple</option>
+    </datalist>
+
+    <!-- <progress value="90" max="100"></progress>
+    <progress value="0.7"></progress>
+    <progress></progress> -->
+    <progress value="0" max="100"></progress>
+    <script>
+        const progress = document.querySelector('progress');
+        const interval = setInterval(function () {
+            progress.value += 10;
+            if (progress.value >= 100) clearInterval(interval);
+        }, 1000)
+    </script>
+</body>
+
+</html>
