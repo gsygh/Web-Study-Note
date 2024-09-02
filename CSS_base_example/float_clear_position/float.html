@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/float.css">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <div class="float"></div>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="float2">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+
+        <div class="float3">1</div>
+        <div class="float3">2</div>
+        <div class="float3">3</div>
+        <!-- clear 예제 -->
+        <div class="floatClear">4</div>
+        <!-- 편법 (추천X) -->
+        <div class="floatClear2">
+            <div class="overflow">overflow해제</div>
+            <div class="overflow">overflow해제</div>
+        </div>
+        <div class="overflowClear">overflow</div>
+        <!-- 추천되는 클리어 예제 -->
+        <div class="parent clearfix">
+            <div class="clearfixChild">float적용</div>
+            <div class="clearfixChild">float적용</div>
+        </div>
+        <div class="clearfixAfter">float 해제</div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+.fontstyle {
+    font-size: 40px;
+    font-style: italic;
+}
+
+/* text-indent 예제 */
+/* 배경 화면에 있고 css로 제공하였을 때, alt가 없기에 코드에 명시해줌 */
+.textIndent {
+    background: url("https://www.heropy.dev/postAssets/xCoQJR/html5.png");
+    width: 500px;
+    height: 500px;
+    text-indent: -9999px;
+}

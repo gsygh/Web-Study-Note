@@ -1,0 +1,86 @@
+@charset 'utf-8';
+
+
+/* float 예제 */
+article {
+
+}
+
+article .float {
+    width: 200px;
+    height: 150px;
+    background: tomato;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+article .float2 {
+    clear: left;
+}
+
+article .float3 {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    float: right;
+}
+
+article .floatClear {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    clear: both;
+}
+
+.floatClear2 {
+    overflow: hidden;
+}
+
+.overflow{
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+}
+.overflowClear{
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+}
+
+/* 추천되는 클리어 예제 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.clearfixChild {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    float: left;
+}
+.clearfixAfter {
+    width: 150px;
+    height: 100px;
+    background: tomato;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+}

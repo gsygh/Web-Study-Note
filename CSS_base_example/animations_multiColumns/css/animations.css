@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+body {
+    height: 3000px;
+}
+
+/* keyframes 예제 */
+.keyframe {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+
+.keyframe:hover {
+    animation: first-animation 2s infinite alternate;
+}
+
+@keyframes first-animation {
+    0% {
+        width: 100px;
+
+    }
+
+    100% {
+        width: 500px;
+    }
+}
+
+.keyframe2 {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+}
+
+.keyframe2:hover {
+    animation: second-animation 3s infinite alternate;
+}
+
+@keyframes second-animation {
+    0% {
+        width: 100px;
+        background: tomato;
+    }
+
+    75% {
+        width: 500px;
+        background: dodgerblue;
+    }
+
+    100% {
+        width: 300px;
+        background: yellow;
+    }
+}
+
+/* animation-timing-function, delay 예제 */
+.duration {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.duration1 {
+    background: tomato;
+}
+
+.duration2 {
+    background: dodgerblue;
+}
+
+.duration3 {
+    background: yellowgreen;
+}
+
+.duration1:hover {
+    animation: third-animation 2s 3 alternate;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+.duration2:hover {
+    animation: third-animation 2s 3 1s;
+}
+
+.duration3:hover {
+    animation: third-animation 2s 3;
+    animation-delay: -1s;
+}
+
+@keyframes third-animation {
+    0% {
+        width: 150px;
+    }
+
+    100% {
+        width: 500px;
+    }
+}
+
+/* animation-iteration-count, direction 예제 */
+.iteration{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+}
+.iteration:hover {
+    animation: movemove 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes movemove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* animation-fill-mode 예제 */
+.fillMode {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+    margin: 30px;
+}
+.fillMode:hover {
+    animation: fillMode 2s 3;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fillMode {
+    0% {
+        transform: translate(100px, 100px);
+        background: dodgerblue;
+    }
+    100% {
+        transform: translate(300px, 300px);
+        background: yellowgreen;
+    }
+}
+
+/* animation-play-state 예제 */
+.playState {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 10px;
+    margin: 30px;
+    animation: size-up 2s infinite linear alternate;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playState::before {
+    content: "가상요소 running";
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+}
+.playState:hover {
+    animation-play-state: paused;
+    background: dodgerblue;
+}
+
+.playState:hover::before {
+    content: "가상요소 paused";
+}
+
+@keyframes size-up {
+    0% {
+        width: 150px;
+    }
+    100% {
+        width: 100%;
+    }
+}

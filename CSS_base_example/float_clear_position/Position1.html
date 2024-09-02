@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Position1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- relative 예제 (본인 기존 위치를 기준으로 설정) -->
+    <div class="relativeBox">1</div>
+    <div class="relativeBox relative">2</div>
+    <div class="relativeBox">3</div>
+
+    <!-- absolute 예제 (위치 상 부모의 위치를 기준으로 함) -->
+    <!-- 부모 요소에 position 설정 없을 시 뷰포트 기준으로 배치 -->
+    <div class="absoluteGrandParent">
+        <div class="absoluteParent">
+            <div class="absoluteChild">1</div>
+            <div class="absoluteChild absolute">2</div>
+            <div class="absoluteChild">3</div>
+        </div>
+    </div>
+
+    <!-- fixed 예제 -->
+    <div class="Fixed">뷰포트</div>
+
+    <!-- sticky 예제 -->
+    <div class="stickyContainer">
+        <div class="stickydiv">
+            <h1>title1</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title2</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title3</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title4</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title5</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title6</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title7</h1>
+        </div>
+        <div class="stickydiv">
+            <h1>title8</h1>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

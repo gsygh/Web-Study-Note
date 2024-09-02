@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+html {
+    font-size: 10px;
+}
+
+body * {
+    border: 2px solid;
+
+}
+.container {
+    /* width: 600px; */
+    height: 50vh;
+    width: 50em;
+    font-size: 11px;
+}
+.parent {
+    /* width: 300px; */
+    width: 50%;
+    font-size: 2em;
+}
+.child {
+    width: 50%;
+    font-size: 2rem;
+}

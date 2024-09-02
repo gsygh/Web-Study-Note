@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="./css/box.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div></div>
+    <span>Text Text</span>
+
+    <div class="paddingTest">Hello</div> -->
+
+    <!-- border example -->
+    <span class="solid">soild</span>
+    <span class="dotted">dotted</span>
+    <span class="dashed">dashed</span>
+    <span class="double">double</span>
+    <span class="groove">groove</span>
+    <span class="ridge">ridge</span>
+    <span class="inset">inset</span>
+    <span class="outset">outset</span>
+    
+
+    <!-- border-box example -->
+     <!-- <div class="box"></div> -->
+
+     <!-- Button Clink => 요소에 hide 추가 및 제거 예제 -->
+      <button>Toggle</button>
+      <div>요소</div>
+      <script>
+        const el = document.querySelector('div');
+        const btn = document.querySelector('button'); 
+
+        btn.addEventListener('click', function () {
+           if (el.classList.contains('hide')) {
+            el.classList.remove('hide');
+           } 
+           else {
+            el.classList.add('hide');
+           }
+        });
+      </script>
+    
+    <!-- overflow 예제 -->
+     <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+     </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+.box {
+    width: 400px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 50px;
+    background-image: url('https://cdn.lolchess.gg/upload/images/champions/Ashe_1720780484-Ashe.png');
+    background-repeat: no-repeat;
+    /* 긴 길이(가로)에 맞춤(짤림 주의) */
+    /* background-size: cover; */
+
+    /* 짧은 길이에 맞춤 */
+    background-size: contain;
+}

@@ -1,0 +1,77 @@
+@charset 'utf-8';
+
+.color {
+    width: 200px;
+    height: 100px;
+    background-color: tomato;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+    color: red;
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    font-size: 32px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: 2px solid yellowgreen;
+
+    background-image: url("https://cdn.lolchess.gg/upload/images/champions/Ashe_1720780484-Ashe.png"),
+        url('https://cdn.lolchess.gg/upload/images/champions/Elise_1720780117-Elise.png'),
+        url('https://cdn.lolchess.gg/upload/images/champions/Nilah_1720780222-Nilah.png');
+}
+
+.repeatPosition {
+    width: 400px;
+    height: 400px;
+    font-size: 32px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: 2px solid yellowgreen;
+
+    background-image: url("https://cdn.lolchess.gg/upload/images/champions/Ashe_1720780484-Ashe.png"),
+        url('https://cdn.lolchess.gg/upload/images/champions/Elise_1720780117-Elise.png'),
+        url('https://cdn.lolchess.gg/upload/images/champions/Nilah_1720780222-Nilah.png');
+    background-size: 100px;
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-y; */
+    background-repeat: repeat-x;
+    background-position: left 50px;
+}
+
+/* attachment 예제 */
+body {
+    height: 3000px;
+}
+
+.attachment {
+    width: 500px;
+    height: 350px;
+    font-size: 32px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: 2px solid yellowgreen;
+
+    background-image: url("https://cdn.lolchess.gg/upload/images/champions/Ashe_1720780484-Ashe.png");
+    /* 일반적인 경우 : scroll */
+    /* background-attachment: scroll; */
+    
+    /* 뷰 포트에 고정되어 움직이지 않음 */
+    background-attachment: fixed;
+
+    
+}

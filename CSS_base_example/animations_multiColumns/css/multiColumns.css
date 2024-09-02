@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+p {
+    color: red;
+    text-align: justify;
+    /* column-width: 200px;
+    column-count: 3; */
+    columns: 200px 3;
+    column-gap: 20px;
+    column-rule: 2px dashed ;
+}

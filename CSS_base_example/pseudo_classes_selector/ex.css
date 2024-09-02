@@ -1,0 +1,107 @@
+/* 가상 클래스 선택자 */
+/* a:hover{
+    font-weight: bold;
+    font-size: 20px;
+}
+    
+.box {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    transition: 0.4s;
+}
+  
+.box:hover {
+    width: 200px;
+}
+
+.box:active {
+    width: 200px;
+    background: yellowgreen;
+}
+
+.text {
+    width: 100px;
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    transition: 0.4s;
+}
+
+.text:focus {
+    border-color: red;
+    width: 200px;
+}
+
+.fruits li:first-child{
+    color: red;
+}
+
+.fruits li:last-child {
+    color: yellowgreen;
+}
+
+.fruits li:nth-child(3n) {
+    color: aqua;
+}
+
+.fruits li:nth-child(n+3) {
+    color: aqua;
+}
+
+.fruits li:nth-of-type(2) {
+    color: yellowgreen;
+} */
+
+
+
+/* 부정 선택자 */
+/* .fruits {
+    font-size: 40px;
+
+}
+.fruits li:not(.strawbarry) {
+    color: red;
+} */
+
+
+
+/* 가상 요소 선택자 */
+/* ul {
+    font-size: 40px;
+}
+ul li::before {
+    content: "숫자";
+    font-weight: bold;
+    color: red;
+    margin-right: 20px;
+}
+ul li::after {
+    content: url("https://www.heropy.dev/postAssets/xCoQJR/main.jpg");
+    font-weight: bold;
+    color: blue;
+    margin-left: 20px;
+} */
+
+
+
+/* 속성 선택자 */
+[disabled] {
+    opacity: 0.2; /* 투명도 20% */
+    color: red;
+}
+[type="password"] {
+    color: yellowgreen;
+}
+[class^="btn-"] {
+    font-weight: bold;
+    border-radius: 20px;
+}
+[class$="success"] {
+    color: green;
+    border: 2px solid green;
+}
+[class$="danger"] {
+    color: red;
+    border: 2px solid red;
+}
