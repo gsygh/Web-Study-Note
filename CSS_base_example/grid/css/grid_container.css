@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+ /* display, grid-template-rows, columns 예제 */
+/* .container {
+    display: grid;
+    border: 4px solid lightgray;
+    grid-template-rows: repeat(2, 100px, 200px);
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.item {
+    border: 10px dashed red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* grid-template-areas, row(column)-gap 예제 */
+/* .container {
+    display: grid;
+    border: 4px solid lightgray;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "main . aside"
+    ". footer footer";
+    gap: 10px 20px;
+}
+.item {
+    border: 10px dashed red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item:nth-child(1) {grid-area: header;}
+.item:nth-child(2) {grid-area: main;}
+.item:nth-child(3) {grid-area: aside;}
+.item:nth-child(4) {grid-area: footer;} */
+
+/* grid-template 단축 속성 예제 */
+/* .container {
+    display: grid;
+    border: 4px solid lightgray;
+    grid-template: 
+    "header header header" 80px
+    "main . aside" 350px
+    ". footer footer" 130px
+    / 2fr 100px 1fr;
+    gap: 10px 20px;
+}
+.container > * {
+    border: 10px dashed red;
+}
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+} */
+
+
+/* grid-auto-rows(columns) 예제 */
+/* .container {
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 100px;
+}
+.item {
+    border: 10px solid red;
+}
+.item:nth-child(1) {
+    grid-column: 1 /3;
+}
+.item:nth-child(2) {
+    grid-column: 3 / 5;
+}
+.item:nth-child(3) {
+    grid-column: span 2;
+}
+.item:nth-child(4) {
+    grid-column: 6 / 7;
+    grid-row: 5 / 7;
+} */
+
+/* grid-auto-flow 예제 */
+/* .container {
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+}
+.item {
+    border: 10px solid red;
+}
+.item:nth-child(1) {
+    grid-column: span 2;
+
+}
+.item:nth-child(2) {
+    grid-column: -1 / -3;
+} */
+
+/* align-content(수직 정렬), justify-content(수평 정렬) 예제 */
+.container {
+    width: 600px;
+    height: 500px;
+    border: 4px solid gray;
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+    align-content: center;
+    justify-content: center;
+}
+.container > .item {
+    border: 2px dashed red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+
+}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+/* minmax, fit-content 예제 */
+/* .container {
+    border: 4px solid gray;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: minmax(100px, 1fr) minmax(200px, 1fr);
+    grid-template-columns: fit-content(300px) fit-content(300px);
+    padding: 5px;
+}
+.item {
+    border: 2px dashed red;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font: 32px bold;
+} */
+
+/* fr, min-content, max-content 예제 */
+/* .container {
+    border: 4px solid gray;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: min-content 1fr 100px 25%;
+    grid-template-columns: min-content 1fr 150px 30% max-content;
+    padding: 5px;
+    word-break: keep-all;
+}
+.item {
+    border: 2px dashed red;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font: 32px bold;
+} */
+
+/* auto-fill, auto-fit 예제 */
+.container {
+    width: 300px;
+    border: 4px solid gray;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-auto-rows: 100px;
+}
+.item {
+    border: 2px dashed red;
+    font: 20px bold;
+    
+}
