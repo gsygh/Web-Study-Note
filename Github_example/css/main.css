@@ -22,7 +22,7 @@
 /* COMMON */
 .body__container {
     font-family: 'Roboto', sans-serif;
-    font-size: 16;
+    font-size: 16px;
     font-weight: 400;
     color: #333;
 }
@@ -43,7 +43,7 @@
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
     border: 1px solid #d5d5d5;
     border-radius: 5px;
-    display: inline-flex;
+    display: flex;
     padding: 0px 12px;
     align-items: center;
     font-size: 14px;
@@ -54,6 +54,7 @@
     position: relative;
     color: #333;
 }
+
 .btn:hover::before {
     content: "";
     position: absolute;
@@ -63,6 +64,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
 }
+
 .btn.btn--primary {
     border: 1px solid #65b636;
     color: #fff;
@@ -92,12 +94,16 @@ Vender prefix(브라우저 업체 별 접두사)) (placeholder)
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 16px;
 }
+
 .input--text:focus {
     border-color: #51a7e8;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 
-                0 0 5px rgba(81, 167, 232, 0.5);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(81, 167, 232, 0.5);
 }
-.input--text::placeholder { color: #cacaca; }
+
+.input--text::placeholder {
+    color: #cacaca;
+}
 
 
 /* A tag */
@@ -112,24 +118,24 @@ a {
     clear: both;
     display: block;
 }
+
 .float--left {
     float: left;
 }
+
 .float--right {
     float: right;
 }
 
 /* Summary */
-.summary{
-    
 
-}
 .summary__title {
     font-size: 38px;
     font-weight: 300;
     line-height: 1.25;
     margin-bottom: 18px;
 }
+
 .summary__description {
     font-size: 26px;
     font-weight: 300;
@@ -141,6 +147,7 @@ a {
 .section {
     position: relative;
 }
+
 .section .inner {
     max-width: 1200px;
     /* margin 0 auto 는 width 값이 정의되어 있어야 가능 */
@@ -157,6 +164,7 @@ header {
     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     background: #fff;
 }
+
 header .inner {
     height: 78px;
 }
@@ -167,9 +175,11 @@ header .menu-group {
     align-items: center;
     height: 100%;
 }
+
 header .logo {
     margin-right: 10px;
 }
+
 header .logo a {
     background: url(../img/logo.svg);
     display: block;
@@ -179,18 +189,22 @@ header .logo a {
     /* 9999는 명시적인 것 */
     text-indent: -9999px;
 }
+
 header .logo a:hover {
     background: url(../img/logo_on.svg);
 }
+
 header .main-menu {
     display: flex;
 }
+
 /* a tag에 직접 padding을 확보함으로서 클릭 영역 확대 */
 header .main-menu li a {
     display: block;
     padding: 30px 10px;
     color: #3c4146;
 }
+
 header .main-menu li a:hover {
     color: #4078c0;
 }
@@ -201,40 +215,60 @@ header .sign-group {
     align-items: center;
     height: 100%;
 }
+
 header .btn-group {
     order: 2;
     /* sign in 과 sign up 은 inline flex
     줄 바꿈으로 인해 생기는 공백을 없애기 위해 flex로 지정 */
     display: flex;
 }
+
 header .btn-group .sign-in {
     margin-right: 4px;
 }
+
 #search-form {
     order: 1;
     margin-right: 10px;
 }
+
 #search {
     width: 160px;
     font-size: 14px;
 }
+
 /* search id값인 요소의 형제 중 type=submit인 경우 */
 /* 전송 버튼을 없애기 위해 사용 */
-#search + [type="submit"] {
+#search+[type="submit"] {
     display: none;
 }
+
 header .sub-menu {
     display: flex;
     margin-right: 10px;
 }
+
 header .sub-menu li a {
     display: block;
     padding: 30px 10px;
     color: #3c4146;
     font-size: 13px;
 }
+
 header .sub-menu li a:hover {
     color: #4078c0;
+}
+
+#toggle-btn {
+    display: none;
+    background: url(../img/toggle-btn.svg);
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px;
 }
 
 
@@ -246,6 +280,7 @@ header .sub-menu li a:hover {
     /* 배경 이미지가 section 전체 배치를 유지하도록 */
     background-size: cover;
 }
+
 /* 이미지를 어둡게 하기 위해 section visual 의 앞부분에 rgba 값 삽입 */
 .section--visual::before {
     content: "";
@@ -258,29 +293,34 @@ header .sub-menu li a:hover {
     right: 0;
     background: rgba(0, 0, 0, .3);
 }
+
 .section--visual .inner {
     padding: 160px 0;
     display: flex;
 }
+
 .section--visual .summary {
     flex-grow: 1;
     flex-basis: 0;
     margin-right: 90px;
 }
+
 .section--visual .summary__title {
     color: #FFF;
     font-size: 54px;
     /* box-shadow와 비슷하게 text 그림자 조절 */
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
-                0 1px 25px rgba(0, 0, 0, .75);
-                
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+        0 1px 25px rgba(0, 0, 0, .75);
+
 }
+
 .section--visual .summary__description {
     color: #FFF;
     /* box-shadow와 비슷하게 text 그림자 조절 */
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
-                0 1px 25px rgba(0, 0, 0, .75);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+        0 1px 25px rgba(0, 0, 0, .75);
 }
+
 #sign-form {
     width: 340px;
     margin-top: 16px;
@@ -289,13 +329,16 @@ header .sub-menu li a:hover {
 #sign-form li {
     margin-bottom: 17px;
 }
+
 #sign-form li:last-child {
     margin-bottom: 0;
 }
+
 #sign-form .input--text {
     width: 100%;
     height: 40px;
 }
+
 #sign-form .caption {
     font-size: 12px;
     margin-top: 5px;
@@ -303,6 +346,7 @@ header .sub-menu li a:hover {
     line-height: 1.5;
     text-align: center;
 }
+
 /* #sign-form 안에 submit은 전송 버튼 밖에 없으므로
 굳이 class 생성하지 않고 css 적용 */
 #sign-form [type="submit"] {
@@ -321,6 +365,7 @@ header .sub-menu li a:hover {
     background: #f5f5f5;
     padding-top: 66px;
 }
+
 .section--feature .summary {
     max-width: 1200px;
     margin: 0 auto;
@@ -331,6 +376,7 @@ header .sub-menu li a:hover {
     max-width: 800px;
     margin: 50px auto;
 }
+
 /* video 는 16:9 비율로 유지해야 함 
 높이값은 0으로 픽스, padding-top으로 16:9를 맞춤(56.25)
 */
@@ -339,6 +385,7 @@ header .sub-menu li a:hover {
     padding-top: 56.25%;
     position: relative;
 }
+
 .section--feature iframe {
     position: absolute;
     top: 0;
@@ -346,15 +393,18 @@ header .sub-menu li a:hover {
     width: 100%;
     height: 100%;
 }
+
 .section--feature .tiles {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
+
 .section--feature .tiles .inner {
     /* 전역 속성에 다른 속성은 모두 정의되어있음
     수정할 것만 수정 */
     max-width: 1200px;
 }
+
 /* grid는 아직 호환성 문제로 인해 실무에서는 float과 flex를 더 많이 사용함 */
 /* .section--feature .tiles ul { 
     
@@ -363,8 +413,8 @@ header .sub-menu li a:hover {
 
 } */
 .section--feature .tiles ul {
-
 }
+
 .section--feature .tiles li {
     padding: 34px 24px;
     text-align: center;
@@ -376,20 +426,127 @@ header .sub-menu li a:hover {
     float: left;
     width: 25%;
 }
+
 .section--feature .tiles li:last-child {
     border-right: none;
 }
+
 .section--feature .tiles li img {
     max-width: 100%;
     padding: 14px 10% 24px;
     box-sizing: border-box;
 }
+
 .section--feature .tiles li h3 {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
 }
+
 .section--feature .tiles li p {
     font-size: 14px;
     color: #767676;
+}
+
+
+/* Where is */
+.section--where-is {}
+
+.section--where-is .inner {
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+}
+
+/* Pricing Card */
+.section--pricing {
+    background: linear-gradient(#f5f5f5, #fff);
+}
+
+.section--pricing .inner {
+    padding: 80px 0;
+}
+
+.section--pricing .card {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.section--pricing .card .cell {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section--pricing .card .cell1 .btn {
+    height: 50px;
+    font-size: 16px;
+}
+
+.section--pricing .card .cell2 {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-left: 1px solid #e5e5e5;
+}
+
+
+/* Footer */
+footer {}
+
+footer .inner {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+}
+
+footer .site-links {
+    display: flex;
+
+}
+
+footer .site-links li {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #767676;
+}
+
+footer .site-links li a {
+    color: #4078c0;
+}
+
+footer .site-links li a:hover {
+    text-decoration: underline;
+}
+
+footer .logo {
+    /* 전역 속성 inner는 이미 relative가 존재 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* 영역 설정 후 margin auto
+    실제 svg image의 width와 height을 임력함으로써 정렬 완료 */
+    width: 24px;
+    height: 24px;
+}
+
+footer .logo:hover svg {
+    /* logo hover 되었을 때 svg를 fill을 이용해 색상 변경 가능 */
+    fill: #4078c0;
 }

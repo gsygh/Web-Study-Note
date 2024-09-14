@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+
+/* Media */
+
+
+/* .section 이 없으면 명시도 점수에서 .section .header보다 낮아
+    max-width 적용이 안됨
+    => header 내의 .section 내의 .inner로 명시도 점수를 높여서 적용 */
+header.section .inner {
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+
+}
+
+header .menu-group,
+header .sign-group {
+    float: none;
+}
+
+header .menu-group {
+    display: block;
+}
+
+header .logo {
+    padding: 12px 0;
+}
+
+header .main-menu {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header .main-menu li {
+    border-top: 1px solid #e5e5e5;
+}
+
+header .main-menu li a {
+    padding: 16px 0;
+}
+
+header .sign-group {
+    display: block;
+    padding: 10px 0 20px;
+}
+
+header .btn-group {
+    display: block;
+}
+
+header .btn-group .btn {
+    justify-content: center;
+}
+
+header .btn-group .sign-in {
+    /* 기존 sign in과 up 사이에 존재하는 margin 삭제 */
+    margin-right: 0;
+    margin-bottom: 12px;
+}
+
+#search-form {
+    margin-top: 12px;
+    margin-right: 0;
+}
+
+#search {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+}
+
+header .sub-menu {
+    margin-top: 12px;
+    margin-right: 0;
+    justify-content: center;
+}
+
+header .toggle {
+    display: none;
+}
+
+header .toggle.on {
+    display: block;
+}
+
+#toggle-btn {
+    display: block;
+}
+
+
+/* Visual */
+.section--visual {
+    background: url(../img/bg-small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section--visual .inner {
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+}
+
+.section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+
+.section--visual #sign-form {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+/* Feature Section */
+
+.section--feature .summary {
+    padding: 0 20px;
+}
+
+.section--feature .tiles li {
+    width: 50%;
+}
+
+.section--feature .tiles li:nth-child(2) {
+    border-right: none;
+}
+
+.section--feature .tiles li img {
+    /* 위 좌우 아래 패딩으로 img 크기 조절 */
+    padding: 14px 30% 24px;
+}
+
+
+/* Where-is Section */
+.section--where-is .inner {
+    max-width: none;
+    margin-top: 0;
+    padding: 80px 20px 0;
+}
+
+
+/* Pricing Section */
+.section--pricing .inner {
+    max-width: none;
+    padding: 80px 20px;
+}
+.section--pricing .card .cell2 {
+    font-size: 20px;
+}
+
+/* Footer */
+footer .inner {
+    padding: 50px 20px;
+}
+
+footer .logo {
+    display: none;
+}

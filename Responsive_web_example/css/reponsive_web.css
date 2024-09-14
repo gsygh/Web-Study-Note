@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+
+.container {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+}
+
+
+/* 화면의 width가 700 이하일 때 */
+/* @media screen and (max-width: 700px) {
+    .container {
+        height: 300px;
+        width: 300px;
+        background: red;
+        transition-duration: 0.5s;
+    }
+} */
+/* 화면의 세로가 가로보다 길 경우 = portrait */
+/* 화면의 가로가 세로보다 길 경우 = landscape */
+@media screen and (orientation: portrait) {
+    .container {
+        height: 200px;
+        width: 300px;
+        background: red;
+        transition-duration: 0.5s;
+    }
+}
