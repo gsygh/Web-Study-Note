@@ -102,7 +102,7 @@ Vender prefix(브라우저 업체 별 접두사)) (placeholder)
 }
 
 .input--text::placeholder {
-    color: #cacaca;
+    color: #c9c9c9;
 }
 
 
