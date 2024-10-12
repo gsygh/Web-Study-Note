@@ -211,10 +211,23 @@ header .menu-group {
 }
 
 header .menu-group a {
+    line-height: 150%;
     flex-grow: 1;
     flex-basis: auto;
     display: flex;
     justify-content: center;
+    word-break: keep-all;
+}
+#toggle-btn {
+    display: none;
+    background: url('../img/toggle-btn.svg');
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    cursor: pointer;
+    text-indent: -9999px;
 }
 
 header .menu-group .blog-button {}
@@ -271,16 +284,21 @@ header .menu-group a:last-child {
     padding: 200px 0 150px;
 }
 
-.main__section .summary {}
+.main__section .summary {
+    max-width: 100%;
+    margin: 0 auto;
+}
 
 .main__section .summary__title {
     padding-top: 100px;
     z-index: 1;
 }
 .main__section .summary .description-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 200px;
 }
 .main__section .summary .description-box .summary__description {
     font-weight: bold;

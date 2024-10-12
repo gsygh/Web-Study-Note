@@ -4,19 +4,19 @@ const $pages = document.querySelectorAll('section')
 
 
 // Anchor 이용한 페이지 내 이동(스크롤 효과 추가)
-$pageButtons.forEach(function(button) {
+$pageButtons.forEach(function (button) {
     button.addEventListener('click', function (event) {
         event.preventDefault();
         // console.log(location.hash);
         const page_id = button.hash.substr(1);
-        
+
         // 동일 id로 이동 > 동일 id 요소 찾기
         const $page = document.getElementById(page_id);
         console.log($page);
-        
-        
-        $page.scrollIntoView({behavior: "smooth"});
-        
+
+
+        $page.scrollIntoView({ behavior: "smooth" });
+
     });
 })
 
@@ -26,8 +26,13 @@ const $header = document.getElementsByTagName('header');
 const $header__title = document.getElementsByClassName('title');
 const $header__page_button = document.getElementsByClassName('page-button');
 const $header__blog_button = document.getElementsByClassName('blog-button');
+const $toggle_btn = document.getElementById('toggle-btn');
+const $toggles = document.getElementsByClassName('toggle');
 
-window.addEventListener('scroll', function() {
+
+
+
+window.addEventListener('scroll', function () {
     if (this.window.scrollY > 100) {
         $header[0].style.backgroundColor = 'white';
         $header[0].style.border = '1px solid #e2e2e2';
@@ -40,8 +45,13 @@ window.addEventListener('scroll', function() {
         $header[0].style.transform = 'translate(-50%, 0)';
         $header[0].style.top = '3%';
         $header[0].style.height = '70px';
-        $header__title[0].style.marginLeft = '100px';
         $header__blog_button[0].style.marginRight = '100px';
+        $toggle_btn.style.top = '22px';
+        [].forEach.call($toggles, function (toggle) {
+            if(!(toggle.classList.contains('scroll--on'))) {
+                toggle.classList.toggle('scroll--on');
+            }
+        })
         
     }
     else {
@@ -55,19 +65,28 @@ window.addEventListener('scroll', function() {
         $header[0].style.transform = '';
         $header[0].style.top = '0%';
         $header[0].style.height = '100px';
-        $header__title[0].style.marginLeft = '200px';
         $header__blog_button[0].style.marginRight = '200px';
+        $toggle_btn.style.top = '37px';
+        [].forEach.call($toggles, function (toggle) {
+            toggle.classList.remove('scroll--on');
+        });
+
+
     }
 })
 
 
-// // Image 삽입
+// 메뉴 버튼 클릭 이벤트
 
-// let container = document.getElementsByClassName('tiles'); // tiles container 호출
-// let new_ul = document.createElement('ul'); // 감싸줄 ul 태그 생성
-// new_ul.className = 'capture__group clearfix'; // ul 태그의 class name 생성
+// const $toggle_btn = document.getElementById('toggle-btn');       // 해당 변수는 이미 읽어옴
 
-// container[0].appendChild(new_ul); // ul 태그 div 내 삽입
-
-// // 폴더 내 사진 갯수 파악 후 *3/4 (pc 기준 한 줄)
-// let selected_directory_all = [];
+$toggle_btn.addEventListener('click', function () {
+    toggleElements();
+})
+function toggleElements() {
+    // 유사 배열인 toggles를 call함수를 통해 연결
+    // 찾은 toggle 의 classList(클래스 선택자를 제어)를 통해 'on'이라는 클래스 선택자를 toggle
+    [].forEach.call($toggles, function (toggle) {
+        toggle.classList.toggle('menu--on');
+    });
+}

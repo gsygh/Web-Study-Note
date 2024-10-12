@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+.summary__title {
+    font-size: 38px;
+}
+
+header .title-menu-group .title-group,
+header .title-menu-group .menu-group {
+    float: none;
+}
+header .title-menu-group .title-group {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title-menu-group .title-group .title {
+    margin: 0px;
+}
+header .title-menu-group .toggle {
+    display: none;
+    background: #eee;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 14px;
+}
+header .title-menu-group .toggle.menu--on {
+    display: block;
+}
+header .title-menu-group .toggle.scroll--on {
+    display: none;
+    background: white;
+    border-radius: 40px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 28px;
+}
+header .title-menu-group .toggle.scroll--on.menu--on {
+    display: block;
+}
+header .title-menu-group .toggle a {
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    border-radius: 0;
+    line-height: 150%;
+    border-top: 1px solid #777;   
+    transition: .3s;
+}
+header .title-menu-group .toggle a:last-child {
+    margin-right: 0px !important;
+}
+
+#toggle-btn {
+    display: block;
+}
+
+
+/* Main section */
+.main__section .summary__description {
+    font-size: 24px;
+}
+.main__section .summary__title {
+    padding-top: 50px;
+}
+
+
+/* Order section */
+.order__section .inner {
+    max-width: none;
+    padding: 70px 40px 40px;
+}
+.order__section .inner .order__title {
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+.order__section .inner .order-group {
+    
+}
+.order__section .inner .order-group .order-box {
+    position: relative;
+}
+.order__section .inner .order-group .operation-title {
+    padding-bottom: 10px;
+}
+.order__section .inner .order-group .operation-title h2 {
+    font-size: 30px;
+}
+.order__section .inner .order-group .operatrion-description  {
+    
+}
+.order__section .inner .order-group .operatrion-description p {
+    font-size: 20px;
+}
+.order__section .inner .order-group .operatrion-description .point {
+    font-size: 16px;
+    padding: 10px 5px;
+    /* point 위치 고정 */
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+
+
+/* Capture section */
+.capture__section .inner {
+    max-width: none;
+    padding: 70px 40px 40px;
+}
+.capture__section .inner .capture__title {
+    margin-top: 30px;
+    font-size: 38px;
+}
+.capture__section .inner .summary__description {
+    margin-top: 50px;
+}
+.capture__section .inner .summary__description p {
+    font-size: 24px;
+}
+.capture__section .inner .blog-page p {
+    font-size: 24px;
+}
+.capture__section .inner .tiles {
+
+}
+.capture__section .inner .tiles .capture__group li {
+    width: 50%;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    height: 250px;
+}
+footer .footer-title {
+    padding: 50px 30px 30px;
+}
+footer .footer-title {
+    font-size: 20px;
+}
