@@ -61,6 +61,13 @@ header .title-menu-group .toggle a:last-child {
 
 
 /* Main section */
+.main__section::before {
+    content: "";
+    background: url('../img/nusu_main_tablet.png');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+}
 .main__section .summary__description {
     font-size: 24px;
 }
@@ -69,7 +76,7 @@ header .title-menu-group .toggle a:last-child {
 }
 
 
-/* Order section */
+/* Operation Order Section */
 .order__section .inner {
     max-width: none;
     padding: 70px 40px 40px;
@@ -138,7 +145,5 @@ footer {
 }
 footer .footer-title {
     padding: 50px 30px 30px;
-}
-footer .footer-title {
     font-size: 20px;
 }

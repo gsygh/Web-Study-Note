@@ -12,7 +12,6 @@ $pageButtons.forEach(function (button) {
 
         // 동일 id로 이동 > 동일 id 요소 찾기
         const $page = document.getElementById(page_id);
-        console.log($page);
 
 
         $page.scrollIntoView({ behavior: "smooth" });

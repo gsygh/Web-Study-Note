@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* Common */
+.summary__title {
+    font-size: 26px;
+    height: auto;
+    color: #777;
+}
+
+
+/* Header */
+header .title-menu-group .title-group {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 30px;
+}
+header .title-group .title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+
+/* Main section */
+.main__section {
+    padding: 10px;
+}
+.main__section::before {
+    content: "";
+    background: url('../img/nusu_main_phone.png');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+}
+.main__section .summary__description {
+    font-size: 18px;
+}
+.main__section .summary__title {
+    padding-top: 100px;
+}
+.main__section .inner .contact-box .phone-number-box {
+    margin-right: 0px;
+}
+
+
+
+/* Operation Order Section */
+.order__section {
+    min-height: 100vh;
+    box-sizing: border-box;
+    height: auto;
+    
+}
+.order__section .inner {
+    box-sizing: border-box;
+    padding: 150px 10px 0px;
+    height: auto;
+}
+.order__section .inner .order__title {
+    font-size: 26px;
+    margin-bottom: 100px;
+}
+.order__section .inner .order-group {
+    display: block;
+    height: auto;
+}
+.order__section .inner .order-group .order-box {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 0 50px;
+    border-top: 1px solid #777;
+    border-radius: 0;
+}
+.order__section .inner .order-box:nth-child(2n) {
+    border-left: none;
+}
+.order__section .inner .order-group .operation-title h2 {
+    font-size: 20px;
+}
+.order__section .inner .order-group .operatrion-description {
+    margin-left: 0;
+}
+.order__section .inner .order-group .operatrion-description p {
+    font-size: 16px;
+}
+.order__section .inner .order-group .operatrion-description .point {
+    font-size: 14px;
+    top: 60%;
+}
+
+
+/* Capture section */
+.capture__section .inner {
+    padding: 180px 10px 40px;
+}
+.capture__section .inner .capture__title {
+    font-size: 26px;
+}
+.capture__section .inner .summary__description p {
+    font-size: 18px;
+}
+/* Footer */
+footer {
+    height: 250px;
+}
+footer .footer-title {
+    padding: 50px 30px 30px;
+}
+footer .footer-title p {
+    font-size: 20px;
+}
+footer .footer-context p {
+    font-size: 14px;
+}

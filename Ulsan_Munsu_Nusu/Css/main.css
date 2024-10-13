@@ -157,7 +157,6 @@ header {
     position: fixed;
     top: 0%;
     left: 0%;
-
     border: 1px solid #e2e2e2;
     z-index: 1;
 }
@@ -195,7 +194,6 @@ header .title-group .title {
     margin-left: 200px;
     font-weight: bold;
     font-size: 28px;
-
 }
 
 header .title-group .title:hover {
@@ -252,7 +250,6 @@ header .menu-group a:last-child {
 /* Main Section */
 .main__section {
     width: 100%;
-    height: 935px;
     padding: 50px;
     height: 100%;
     position: relative;
