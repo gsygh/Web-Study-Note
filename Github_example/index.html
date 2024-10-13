@@ -59,7 +59,21 @@
     <link rel="stylesheet" media="(max-width: 768px)" href="css/main_small.css">
     <script defer src="./main.js"></script>
 
+    <!-- APIKey.js import -->
+    <script defer src="./APIKey.js"></script>
 
+
+    <script>
+        const CONFIGURATION = {
+          "locations": [
+            {"title":"GitHub","address1":"88 Colin P Kelly Jr St","address2":"San Francisco, CA 94107 미국","coords":{"lat":37.782300317906035,"lng":-122.3911483067459},"placeId":"ChIJ32KaYX-AhYARNa93OffiHEk"}
+          ],
+          "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+          "mapsApiKey": "AIzaSyAz1P8YPhbvpP3SkfbwYzCaOW6TVwtMEJc",
+          "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+        };
+  
+    </script>
 </head>
 
 <!-- class = "section" => 해당 클래스를 사용하는 요소는 같은 css를 적용받게 된다.(전역 스타일) -->
@@ -211,7 +225,11 @@
                     </div>
                 </div>
 
-                <div id="map"></div>
+                <div id="map">
+                    <!-- google maps api -->
+                    <gmpx-api-loader key="AIzaSyAz1P8YPhbvpP3SkfbwYzCaOW6TVwtMEJc" solution-channel="GMP_QB_locatorplus_v10_c"></gmpx-api-loader>
+                    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+                </div>
             </div>
 
         </section>
@@ -267,32 +285,9 @@
         </footer>
     </div>
 
-    <script>
-        function initMap() {
-            // 위도 경도 계산된 지도
-            const myLatLng = {
-                lat: 34.782293,
-                lng: -122.391240
-            }
-            const map = new google.maps.Maps(
-                document.getElementById("map"),
-                {
-                    center: myLatLng,
-                    // 지도 내부 스크롤 확대 축소 막는 기능
-                    scrollwheel: false,
-                    zoom: 18
-                }
-            );
-            // 지도의 마커
-            const marker = new google.maps.Marker({
-                position: myLating,
-                map: map,
-                title: 'GitHub'
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"
-        async defer></script>
+    
+    <script type="module" 
+    src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
 </body>
 
 </html>

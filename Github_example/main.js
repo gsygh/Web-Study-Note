@@ -34,7 +34,7 @@
             }
         });
     }
-    
+
     // 찾은 toggle의 on을 제거 => resizing 될 때 자동으로 toggle이 닫히도록
     function offElements() {
         [].forEach.call($toggles, function (toggle) {
@@ -42,5 +42,12 @@
             // 데이터 입력 후 토글하였을 때 값 초기화
         });
     }
+    
+    // google maps api
+    document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+    });
 
 })(window, document)
