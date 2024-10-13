@@ -13,8 +13,6 @@ const CONFIGURATION = {
 const $gmpx_api_loader = document.getElementsByTagName('gmpx-api-loader');
 $gmpx_api_loader[0].setAttribute('key', config.GOOGLE_MAPS_API_KEY);
 
-console.log($gmpx_api_loader[0]);
-
 
 
 
