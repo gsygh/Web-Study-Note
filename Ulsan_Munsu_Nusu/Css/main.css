@@ -95,7 +95,7 @@
 }
 
 .btn:hover {
-    font-weight: bold;
+    font-weight: bold absolute;
 }
 
 .btn:hover::before {
@@ -216,6 +216,14 @@ header .menu-group a {
     justify-content: center;
     word-break: keep-all;
 }
+header .menu-group a:hover {
+    transform: translateY(-4px);
+    transition: .5s;
+}
+/* 첫 시작 시 main-page => 버튼 bold 처리 */
+header .title-menu-group .menu-group .page-button:first-child {
+    font-weight: bold;
+}
 #toggle-btn {
     display: none;
     background: url('../img/toggle-btn.svg');
@@ -226,18 +234,6 @@ header .menu-group a {
     right: 30px;
     cursor: pointer;
     text-indent: -9999px;
-}
-
-header .menu-group .blog-button {}
-
-header .menu-group a:first-child {
-    /* margin-right: 30px; */
-    transition: .3s;
-}
-
-header .menu-group a:nth-child(3) {
-    /* margin-left: 20px;
-    margin-right: 20px; */
 }
 
 header .menu-group a:last-child {

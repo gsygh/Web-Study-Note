@@ -1,13 +1,18 @@
 @charset "utf-8";
 
+/* Common */
 .summary__title {
     font-size: 38px;
+}
+.btn:hover {
+    font-weight: normal;
 }
 
 header .title-menu-group .title-group,
 header .title-menu-group .menu-group {
     float: none;
 }
+
 header .title-menu-group .title-group {
     width: 90%;
     margin: 0 auto;

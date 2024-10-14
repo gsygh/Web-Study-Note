@@ -51,7 +51,6 @@ window.addEventListener('scroll', function () {
                 toggle.classList.toggle('scroll--on');
             }
         })
-        
     }
     else {
         $header[0].style.backgroundColor = '#eee';
@@ -69,8 +68,6 @@ window.addEventListener('scroll', function () {
         [].forEach.call($toggles, function (toggle) {
             toggle.classList.remove('scroll--on');
         });
-
-
     }
 })
 
@@ -88,4 +85,35 @@ function toggleElements() {
     [].forEach.call($toggles, function (toggle) {
         toggle.classList.toggle('menu--on');
     });
+}
+
+// Scroll Position 에 따른 page-button bold 표시
+const mainPage_offsetY = document.getElementById('main-page').offsetTop;
+const orderPage_offsetY = document.getElementById('order-page').offsetTop;
+const capturePage_offsetY = document.getElementById('capture-page').offsetTop;
+
+
+window.addEventListener('scroll', function () {
+    var current_offsetY = window.scrollY;
+    
+    if (current_offsetY >= capturePage_offsetY) {
+        indexButtonToBold(2);
+    }
+    else if (current_offsetY >= orderPage_offsetY) {
+        indexButtonToBold(1);
+    }
+    else if (current_offsetY >= 0) {
+        indexButtonToBold(0);
+    }
+})
+
+function indexButtonToBold(index) {
+    for(i = 0; i < $header__page_button.length; i++) {
+       if(index === i) {
+            $header__page_button[i].style.fontWeight='bold';
+        }
+        else {
+            $header__page_button[i].style.fontWeight='normal';
+        }
+    }
 }
