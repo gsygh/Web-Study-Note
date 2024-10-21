@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-function InputsSample(params) {
+// 함수 형 react에서는 useref hook을 사용
+// 클래스 형 react에서는 React.createRef() 또는 callback을 사용
+function UseRef(params) {
 
     const [inputs, setInputs] = useState({
         name: '',
@@ -40,4 +42,4 @@ function InputsSample(params) {
         </div>
     );
 } 
-export default InputsSample;
+export default UseRef;

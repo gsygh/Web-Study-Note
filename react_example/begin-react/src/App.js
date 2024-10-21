@@ -1,9 +1,11 @@
 import './App.css';
+import UseRef from './hook_example/UseRef';
 import ConditionalRendering from './props_example/ConditionalRendering';
 import Hello from './props_example/Hello';
 import PropsChildren from './props_example/PropsChildren';
 import Counter from './state_example/Counter';
 import InputSample from './state_example/InputSample';
+import InputsSample from './state_example/InputsSample';
 
 function App() {
   const style = {
@@ -34,6 +36,10 @@ function App() {
       <div style={counterStyle}>
         <Counter></Counter>
         <InputSample></InputSample>
+        <InputsSample></InputsSample>
+      </div>
+      <div style={counterStyle}>
+        <UseRef></UseRef>
       </div>
     </div>
   );
