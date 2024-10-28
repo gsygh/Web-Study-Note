@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 // 함수 형 react에서는 useref hook을 사용
 // 클래스 형 react에서는 React.createRef() 또는 callback을 사용
@@ -8,6 +8,7 @@ function UseRef(params) {
         name: '',
         nickname: '',
     });
+    const nameInput= useRef();
     // 비구조화 할당
     const { name, nickname } = inputs;
     const onChange = (e) => {
