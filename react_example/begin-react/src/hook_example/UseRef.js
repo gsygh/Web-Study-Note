@@ -8,11 +8,11 @@ function UseRef(params) {
         name: '',
         nickname: '',
     });
-    const nameInput= useRef();
+    const nameInput = useRef();
     // 비구조화 할당
     const { name, nickname } = inputs;
     const onChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         // react 에서 객체를 업데이트 할 떄는 기존의 객체를 복사해야 함
         const nextInputs = {
             ...inputs,
@@ -20,7 +20,7 @@ function UseRef(params) {
         }
 
         setInputs(nextInputs);
-        
+
     };
 
     const onReset = () => {
@@ -29,12 +29,21 @@ function UseRef(params) {
             nickname: ''
         }
         setInputs(nextInputs);
+        // current = useRef 의 라이브러리 .focus는 DOM API
+        nameInput.current.focus();
     };
 
     return (
         <div>
-            <input name="name" placeholder="이름" onChange={onChange} value={name}/>
-            <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
+            {/* Reset 시 첫 번째 Input에 자동 focusing*/}
+            <input
+                name="name"
+                placeholder="이름"
+                onChange={onChange}
+                value={name}
+                ref={nameInput}
+            />
+            <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname} />
             <button onClick={onReset}>초기화!</button>
             <div>
                 <b>값 : </b>
@@ -42,5 +51,5 @@ function UseRef(params) {
             </div>
         </div>
     );
-} 
+}
 export default UseRef;
