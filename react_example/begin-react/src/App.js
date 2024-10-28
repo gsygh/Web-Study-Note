@@ -6,6 +6,7 @@ import PropsChildren from './props_example/PropsChildren';
 import Counter from './state_example/Counter';
 import InputSample from './state_example/InputSample';
 import InputsSample from './state_example/InputsSample';
+import ArrayRendering from './array/ArrayRendering';
 
 function App() {
   const style = {
@@ -18,7 +19,7 @@ function App() {
   };
   const counterStyle = {
     marginLeft: 50,
-    marginTop: 200
+    marginTop: 50
   };
   const inputSampleStyle = {
     marginTop: 50
@@ -40,6 +41,9 @@ function App() {
       </div>
       <div style={counterStyle}>
         <UseRef></UseRef>
+      </div>
+      <div style={counterStyle}>
+        <ArrayRendering></ArrayRendering>
       </div>
     </div>
   );
