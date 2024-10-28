@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useRef, useState } from 'react';
 import UseRef from './hook_example/UseRef';
 import ConditionalRendering from './props_example/ConditionalRendering';
 import Hello from './props_example/Hello';
@@ -7,8 +8,27 @@ import Counter from './state_example/Counter';
 import InputSample from './state_example/InputSample';
 import InputsSample from './state_example/InputsSample';
 import ArrayRendering from './array/ArrayRendering';
+import CreateUser from './array/CreateUser';
+import UseRefStore from './array/UseRef_store';
 
 function App() {
+  // const [inputs, setInputs] = useState({
+  //   username: '',
+  //   email: '',
+  // });
+  // const { username, email } = inputs;
+  // const onChange = e => {
+  //   console.log(e);
+  //   const { name, email } = e.target;
+  //   setInputs({
+  //     ...inputs,
+  //     // name = username => username : value 적용
+  //     // name = email => eamil : value 적용
+  //     [name]: value,
+
+  //   });
+  // }
+
   const style = {
     backgroundColor: 'black',
     width: 30,
@@ -24,6 +44,25 @@ function App() {
   const inputSampleStyle = {
     marginTop: 50
   }
+
+  const users = [
+    {
+      id: 1,
+      username: 'jiseok',
+      email: 'gsygh@naver.com'
+    },
+    {
+      id: 2,
+      username: 'test1',
+      email: 'test1@naver.com'
+    },
+    {
+      id: 3,
+      username: 'test2',
+      email: 'test2@naver.com'
+    }
+  ]
+
   return (
     <div>
       <PropsChildren>
@@ -43,7 +82,13 @@ function App() {
         <UseRef></UseRef>
       </div>
       <div style={counterStyle}>
-        <ArrayRendering></ArrayRendering>
+        {/* <ArrayRendering></ArrayRendering> */}
+      </div>
+      <div style={counterStyle}>
+        {/* <CreateUser></CreateUser> */}
+      </div>
+      <div style={counterStyle}>
+        <UseRefStore></UseRefStore>
       </div>
     </div>
   );

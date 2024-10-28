@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 
 // 함수 형 react에서는 useref hook을 사용
 // 클래스 형 react에서는 React.createRef() 또는 callback을 사용
-function UseRef(params) {
+// 여기서의 UseRef는 특정 DOM을 선택하기 위해 사용
+function UseRef() {
 
     const [inputs, setInputs] = useState({
         name: '',

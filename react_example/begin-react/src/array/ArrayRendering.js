@@ -9,25 +9,8 @@ function User({user}) {
     )
 }
 
-function ArrayRendering(params) {
-    const users = [
-        {
-            id: 1,
-            username: 'jiseok',
-            email: 'gsygh@naver.com'
-        },
-        {
-            id: 2,
-            username: 'test1',
-            email: 'test1@naver.com'
-        },
-        {
-            id: 3,
-            username: 'test2',
-            email: 'test2@naver.com'
-        }
-    ]
-
+function ArrayRendering({users}) {
+    
     return (
         <div>
             {/* <User user={users[0]}/>
