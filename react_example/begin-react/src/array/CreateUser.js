@@ -1,6 +1,7 @@
 import React, {forwardRef} from 'react';
 
 function CreateUser({username, email, onChange, onCreate, ref}) {
+    console.log('Create');
     
 
     return (
@@ -17,4 +18,4 @@ function CreateUser({username, email, onChange, onCreate, ref}) {
         </div>
     )
 }
-export default CreateUser;
+export default React.memo(CreateUser);

@@ -1,6 +1,9 @@
 import React from "react";
 
-function User({user, onRemove, onToggle}) {
+// React.memo 사용 > React.memo 로 감싸서 const User에 선언
+const User = React.memo(function User({user, onRemove, onToggle}) {
+    console.log('Users');
+    
     return (
         <div>
            <b style={{
@@ -13,9 +16,10 @@ function User({user, onRemove, onToggle}) {
            <button onClick={() => onRemove(user.id)}>삭제</button>
         </div>
     )
-}
+});
 
 function ArrayRendering({users, onRemove, onToggle}) {
+    console.log('ArrayRendering');
     
     return (
         <div>
@@ -37,4 +41,4 @@ function ArrayRendering({users, onRemove, onToggle}) {
     )
 }
 
-export default ArrayRendering;
+export default React.memo(ArrayRendering);
