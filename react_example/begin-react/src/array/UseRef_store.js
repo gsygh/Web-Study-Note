@@ -86,8 +86,6 @@ function UseRefStore() {
     // ArrayRendering 의 onRemove(user.id) => e = user.id
     const onRemove = useCallback((e) => {
         setUsers(users => users.filter(user => user.id !== e));
-        
-        console.log(users);
     }, []);
 
     const onToggle = useCallback((id) => {

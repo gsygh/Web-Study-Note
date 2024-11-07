@@ -10,6 +10,8 @@ import InputsSample from './state_example/InputsSample';
 import ArrayRendering from './array/ArrayRendering';
 import CreateUser from './array/CreateUser';
 import UseRefStore from './array/UseRef_store';
+import UseReducer from './hook_example/UseReducer';
+import UseRef_store_reducer from './array/UseRef_store_reducer';
 
 function App() {
   // const [inputs, setInputs] = useState({
@@ -90,6 +92,13 @@ function App() {
       <div style={counterStyle}>
         <UseRefStore></UseRefStore>
       </div>
+
+      {/* useReduce */}
+      <div style={counterStyle}>
+        <UseReducer></UseReducer>
+        <UseRef_store_reducer></UseRef_store_reducer>
+      </div>
+
     </div>
   );
 }
