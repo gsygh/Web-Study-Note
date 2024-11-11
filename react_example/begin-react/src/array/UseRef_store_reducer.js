@@ -23,7 +23,7 @@ function reducer(state, action) {
         //             [action.name]: action.value
         //         }
         //     }
-        case 'CREATE_USER' :
+        case 'CREATE_USER':
             return {
                 inputs: initialState.inputs,
                 users: state.users.concat(action.user)
@@ -81,11 +81,13 @@ const initialState = {
 
 function UseRefStoreReducer() {
     const [ state, dispatch ] = useReducer(reducer, initialState);
+
     const [form, onChange, reset] = useInputs({
         username: '', 
         email: '',
     });
     const { username, email } = form;
+    
     const nextId = useRef(4);
     const { users } = state;
     
