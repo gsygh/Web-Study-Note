@@ -2,14 +2,16 @@ import React, { useRef, useReducer, useMemo, useCallback, createContext } from '
 import ArrayRendering from './ArrayRendering';
 import CreateUser from './CreateUser';
 import useInputs from '../hook_example/CustomHook';
+import { countActiveUsers } from './CreateUser';
 
 // 이 코드에서는 기존의 UseRef_store의 state를 useReducer를 사용해 관리
 
-function countActiveUsers(users) {
-    console.log('활성 사용자 수를 세는 중...');
+// CreateUsers에서 관리(useContext)
+// function countActiveUsers(users) {
+//     console.log('활성 사용자 수를 세는 중...');
 
-    return users.filter(user => user.active).length;
-}
+//     return users.filter(user => user.active).length;
+// }
 
 function reducer(state, action) {
 
@@ -25,7 +27,6 @@ function reducer(state, action) {
         //     }
         case 'CREATE_USER':
             return {
-                inputs: initialState.inputs,
                 users: state.users.concat(action.user)
             }
         case 'TOGGLE_USER':
@@ -86,31 +87,36 @@ export const UserDispatch = createContext(null);
 function UseRefStoreReducer() {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    const [form, onChange, reset] = useInputs({
-        username: '',
-        email: '',
-    });
-    const { username, email } = form;
+    // 과제(UseContext)
+    // const [form, onChange, reset] = useInputs({
+    //     username: '',
+    //     email: '',
+    // });
+    // const { username, email } = form;
 
-    const nextId = useRef(4);
+    // const nextId = useRef(4);
+    
     const { users } = state;
 
+    console.log(state);
+    
 
 
-    const onCreate = useCallback(e => {
-        // username, eamil 은 커스텀 훅에서 관리
-        // const {name, value} = e.target;
-        dispatch({
-            type: 'CREATE_USER',
-            user: {
-                id: nextId.current,
-                username,
-                email
-            }
-        });
-        nextId.current += 1;
-        reset();
-    }, [username, email, reset]);
+    // // 과제(UseContext)
+    // const onCreate = useCallback(e => {
+    //     // username, eamil 은 커스텀 훅에서 관리
+    //     // const {name, value} = e.target;
+    //     dispatch({
+    //         type: 'CREATE_USER',
+    //         user: {
+    //             id: nextId.current,
+    //             username,
+    //             email
+    //         }
+    //     });
+    //     nextId.current += 1;
+    //     reset();
+    // }, [username, email, reset]);
 
     const count = useMemo(() => countActiveUsers(users), [users]);
 
@@ -122,10 +128,11 @@ function UseRefStoreReducer() {
                     users={users}
                 />
                 <CreateUser
-                    username={username}
-                    email={email}
-                    onChange={onChange}
-                    onCreate={onCreate}
+                    // 과제(UseContext)
+                    // username={username}
+                    // email={email}
+                    // onChange={onChange}
+                    // onCreate={onCreate}
                 />
                 <div>
                     활성 사용자 수 : {count}
