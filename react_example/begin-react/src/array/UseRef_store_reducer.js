@@ -1,8 +1,12 @@
 import React, { useRef, useReducer, useMemo, useCallback, createContext } from 'react';
+import produce from 'immer';
 import ArrayRendering from './ArrayRendering';
 import CreateUser from './CreateUser';
 import useInputs from '../hook_example/CustomHook';
 import { countActiveUsers } from './CreateUser';
+
+// console 에서 임시로 produce 사용하기 위해 선언
+// window.produce = produce;
 
 // 이 코드에서는 기존의 UseRef_store의 state를 useReducer를 사용해 관리
 
@@ -26,27 +30,48 @@ function reducer(state, action) {
         //         }
         //     }
         case 'CREATE_USER':
-            return {
-                users: state.users.concat(action.user)
-            }
+            // immer 사용 Ver.
+            return produce(state, draft => {
+                draft.users.push(action.user);
+            });
+
+
+            // immer 사용 X Ver.
+            // return {
+            //     users: state.users.concat(action.user)
+            // }
         case 'TOGGLE_USER':
-            return {
-                ...state,
-                users: state.users.map(user => user.id === action.id
-                    ? {
-                        ...user,
-                        active: !user.active
-                    }
-                    : user
-                )
-            }
+            // immer 사용 Ver.
+            return produce(state, draft => {
+                const user = draft.users.find(user => user.id === action.id);
+                user.active = !user.active;
+            });
+
+            // immer 사용 X Ver.
+            // return {
+            //     ...state,
+            //     users: state.users.map(user => user.id === action.id
+            //         ? {
+            //             ...user,
+            //             active: !user.active
+            //         }
+            //         : user
+            //     )
+            // }
         case 'REMOVE_USER':
-            return {
-                ...state,
-                users: state.users.filter(
-                    user => user.id !== action.id
-                )
-            }
+            // immer 사용 Ver.
+            return produce(state, draft => {
+                const index = draft.users.findIndex(user => user.id === action.id);
+                draft.users.splice(index, 1);
+            });
+
+            // immer 사용 X Ver.
+            // return {
+            //     ...state,
+            //     users: state.users.filter(
+            //         user => user.id !== action.id
+            //     )
+            // }
 
         default:
             throw new Error("unhandled action");

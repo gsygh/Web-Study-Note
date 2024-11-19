@@ -13,6 +13,7 @@ import UseRefStore from './array/UseRef_store';
 import UseReducer from './hook_example/UseReducer';
 import UseRef_store_reducer from './array/UseRef_store_reducer';
 import UseContext  from './hook_example/UseContext';
+import UseEffect from './hook_example/UseEffect';
 
 function App() {
   // const [inputs, setInputs] = useState({
@@ -103,6 +104,7 @@ function App() {
       {/* useContext */}
       <div style={counterStyle}>
         <UseContext></UseContext>
+        <UseEffect></UseEffect>
       </div>
 
     </div>
