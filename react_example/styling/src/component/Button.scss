@@ -1,0 +1,96 @@
+// 변수 선언
+// $blue: #228be6;
+//
+
+$blue: #228be6;
+$gray: #495057;
+$pink: #f06595;
+
+// mixin = 불필요하게 반복되는 코드 관리할 때 사용
+@mixin button-color($color) {
+  // color 조정
+  background: $color;
+
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%);
+  }
+
+  // outline 조정
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+  }
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  // & = 자기 자신
+  &.medium {
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+  &.large {
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+  &.small {
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  &.blue {
+    // @mixin 사용 안 한 버전
+    // background: $blue;
+
+    // // 요소에 hover 했을 떄 색상을 10% 밝게 설정
+    // &:hover {
+    //   background: lighten($blue, 10%);
+    // }
+    // &:active {
+    //   background: darken($blue, 10%);
+    // }
+
+    // @mixin 사용 한 버전
+    @include button-color($blue);
+  }
+  &.pink {
+    @include button-color($pink);
+  }
+  &.gray {
+    @include button-color($gray);
+  }
+
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  // Button + Button > 버튼 다음에 버튼 컴포넌트가 있다면 오른쪽 버튼에 해당 속성 부여
+  & + & {
+    margin-left: 10px;
+  }
+}

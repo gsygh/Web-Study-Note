@@ -1,0 +1,12 @@
+.App {
+  width: 512px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border: 1px solid black;
+  padding: 2rem;
+
+  // buttons 두 개가 있다면 뒤 컴포넌트에게 margin 적용
+  .buttons + .buttons {
+    margin-top: 10px;
+  }
+}
